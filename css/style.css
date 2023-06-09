@@ -1,10 +1,16 @@
 
-/* font-family: 'Nunito Sans',
-sans-serif;
-font-family: 'Quicksand',
-sans-serif;
-font-family: 'Roboto',
-sans-serif; */
+@import url('./normalize.css');
+
+  html,
+  body {
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      font-size: 16px;
+      font-weight: 400;
+  }
+  h1,h2,h3{
+    font-weight: inherit;
+  }
 
 *{
     box-sizing: border-box;
@@ -16,7 +22,6 @@ a{
 .header{
     padding: 23px 0;
 }
-
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -26,15 +31,17 @@ a{
     gap: 12px;
 }
 .logo__title{
+    font-family: 'Quicksand';
     font-weight: 500;
     font-size: 35px;
     line-height: 35px;
     color: #16133D;
 }
 .section{
-    padding: 100px 0 119px;
+    padding: 100px 0;
 }
 .section__title-1 {
+    font-family: 'Nunito Sans',sans-serif;
     font-weight: 600;
     font-size: 40px;
     line-height: 52px;    
@@ -43,26 +50,58 @@ a{
     color: #16133D;
 }
 .section__title-3 {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 21px;
     color: #7690A8;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 .cards {
     display: flex;
     gap: 30px;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+}
+.cards__icon,
+.cards__img-hover, 
+.cards__img {
+    padding: 12px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(21, 101, 216, 0.1);
+    border-radius: 16px;
+    margin-bottom: 30px;
 }
 .cards__item{
+    display: inline-block;
     padding: 40px;
     border: 1px solid #E5EAF4;
     border-radius: 8px;
     max-width: 370px;
     max-height: 340px;
 }
+.cards__item:hover .cards__img-hover{
+    z-index: 2;
+    border: 1px solid #3DB370;
+
+}
+.cards__item:hover{
+    border: 1px solid #3DB370;
+}
+.cards__icon{
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.cards__img{
+    z-index: 1;
+}
+.cards__img , .cards__img-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .cards__title{
-    font-weight: 400;
     font-size: 24px;
     line-height: 21px;    
     letter-spacing: 0.2px;
@@ -70,15 +109,13 @@ a{
     color: #16133D;
 }
 .cards__text{
-    font-weight: 400;
-    font-size: 16px;
     line-height: 28px;
     color: #16133D;
     margin-bottom: 30px;
 }
 .cards__link{
+    display: block;
     font-weight: 600;
-    font-size: 16px;
     line-height: 19px;
     color: #3DB370;
 }
@@ -86,7 +123,7 @@ a{
     background-color: #16133D;
     padding: 40px 0;
 }
-.title-white{
+.footer .logo__title{
     color: #FFFFFF;
 }
 .social__list{
