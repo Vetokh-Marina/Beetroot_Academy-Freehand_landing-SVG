@@ -1,5 +1,4 @@
 
-
 @import url('./normalize.css');
 
   html,
@@ -22,6 +21,7 @@ a{
 }
 .header{
     padding: 23px 0;
+    border-bottom: 1px solid #EFEEF3;
 }
 .container {
     max-width: 1170px;
@@ -138,18 +138,6 @@ a{
 .list__link{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 38px;
-    width: 38px;
-    background: #EFEEF3;
-    border-radius: 5px;
-}
-.list__link:hover .list__icon{
-    fill:#3DB370;
-}
-.logo-mb{
-    margin-bottom: 40px;
-}
     align-items: center;
     height: 38px;
     width: 38px;
